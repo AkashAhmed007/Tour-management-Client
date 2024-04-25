@@ -13,11 +13,13 @@ import MyList from './Pages/MyList.jsx';
 import Login from './Pages/Login.jsx';
 import Register from './Pages/Register.jsx';
 import ProtectedRoute from './PrivateRoute/ProtectedRoute.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 const router = createBrowserRouter ([
     {
     path:'/',
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
      { path:'/',
       element: <Home></Home>
