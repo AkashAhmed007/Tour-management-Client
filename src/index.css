@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slide1{
+    background-image:url('./assets/pexels-freestockpro-1004584.jpg');  
+}
+.slide2{
+    background-image: url('./assets/pexels-jimmy-teoh-294331-1010657.jpg');  
+}
+.slide3{
+    background-image: url('./assets/pexels-ninauhlikova-725255.jpg');   
+}
+.slide4{
+    background-image: url('./assets/pexels-thelazyartist-1302991.jpg') ;   
+}
+
+.slider{
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

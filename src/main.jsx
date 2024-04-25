@@ -12,7 +12,6 @@ import AddSpot from './Pages/AddSpot.jsx';
 import MyList from './Pages/MyList.jsx';
 import Login from './Pages/Login.jsx';
 import Register from './Pages/Register.jsx';
-import ProtectedRoute from './PrivateRoute/ProtectedRoute.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 
 const router = createBrowserRouter ([
@@ -30,11 +29,11 @@ const router = createBrowserRouter ([
      },
      {
       path:'/addSpot',
-      element:<ProtectedRoute><AddSpot></AddSpot></ProtectedRoute>
+      element:<AddSpot></AddSpot>
      },
      {
       path:'myList',
-      element: <ProtectedRoute><MyList></MyList></ProtectedRoute>
+      element: <MyList></MyList>
      },
      {
       path:'/login',
