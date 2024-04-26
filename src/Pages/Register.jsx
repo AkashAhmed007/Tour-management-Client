@@ -28,21 +28,21 @@ const Register = () => {
     createUser(email,password,name,image)
     .then(()=>{
       Swal.fire({
-        title: 'Success!',
+        title: 'You have register successfully!',
         text: 'Do you want to continue',
         icon: 'success',
-        confirmButtonText: 'Cool'
+        confirmButtonText: 'Ok'
       })
     })
     .then(()=>{
-      navigate("/login")
+      navigate("/")
     })
     .catch(error=>{
       console.log(error)
     })
   }
   return (
-    <div className="min-h-screen my-10">
+    <div className="min-h-screen my-20">
       <div className="w-full mx-auto max-w-md p-8 space-y-3 border rounded-xl dark:bg-gray-50 dark:text-gray-800">
         <h1 className="text-3xl font-bold text-center">Register Now!</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

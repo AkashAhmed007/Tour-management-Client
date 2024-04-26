@@ -1,6 +1,6 @@
 const AllSpot = () => {
     return (
-        <div>
+        <div className="min-h-screen my-20">
             <h1>All Spot Page</h1>
         </div>
     );

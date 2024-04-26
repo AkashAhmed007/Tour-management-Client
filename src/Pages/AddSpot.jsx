@@ -1,6 +1,6 @@
 const AddSpot = () => {
   return (
-    <div>
+    <div className="min-h-screen my-20">
       <section className="p-6 dark:bg-gray-100 dark:text-gray-900 bg-[url('https://i.ibb.co/VC9yssZ/twilight-8171206-1280.jpg')] bg-no-repeat bg-center bg-cover">
         <form
           noValidate=""
