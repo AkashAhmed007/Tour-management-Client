@@ -7,7 +7,6 @@ const Home = () => {
     <div className="my-2">
       <Swiper
         navigation={true}
-        Pagination={true}
         modules={[Navigation, Autoplay]}
         loop={true}
         autoplay={{ delay: 2000 }}

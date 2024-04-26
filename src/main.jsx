@@ -13,6 +13,7 @@ import MyList from './Pages/MyList.jsx';
 import Login from './Pages/Login.jsx';
 import Register from './Pages/Register.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
+import FirebaseProvider from './Firebase/FirebaseProvider/FirebaseProvider.jsx';
 
 const router = createBrowserRouter ([
     {
@@ -50,6 +51,6 @@ const router = createBrowserRouter ([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <FirebaseProvider><RouterProvider router={router}></RouterProvider></FirebaseProvider>
   </React.StrictMode>,
 )
