@@ -1,38 +1,27 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
-import { Navigation, Autoplay} from "swiper/modules";
-
+import Countries from "../Components/Countries";
+import TouristSpots from "../Components/TouristSpots";
+import Banner from "../Components/Banner";
+import CompanyOverview from "../Components/CompanyOverview";
+import CustomerReview from "../Components/CustomerReview";
 const Home = () => {
   return (
-    <div className="my-5">
-      <Swiper
-        navigation={true}
-        modules={[Navigation, Autoplay]}
-        loop={true}
-        autoplay={{ delay: 2000 }}
-      >
-        <SwiperSlide>
-          <div className="slide1 slider">
-            <h1 className="text-8xl font-extrabold text-black">Slide1</h1>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide2 slider">
-            <h1 className="text-8xl font-extrabold text-black">Slide2</h1>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide3 slider">
-            <h1 className="text-8xl font-extrabold text-black">Slide3</h1>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide4 slider">
-            <h1 className="text-8xl font-extrabold text-black">Slide4</h1>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+    <div className="space-y-10 my-14">
+      <div>
+      <Banner></Banner>
+      </div>
+      <div className="min-w-screen-xl">
+        <Countries></Countries>
+      </div>
+      <div>
+        <TouristSpots></TouristSpots>
+      </div>
+      <div>
+        <CompanyOverview></CompanyOverview>
+      </div>
+      <div>
+      <CustomerReview></CustomerReview>
+      </div>
+  </div>
   );
 };
 
