@@ -6,30 +6,33 @@ const googleProvider = new GoogleAuthProvider()
 export const AuthContext = createContext(null);
 const FirebaseProvider = ({children}) => {
 const [user,setUser] = useState(null)
-
+const [loading,setLoading] = useState(false);
 //Create users 
 const createUser =(email,password,userName,photoURL)=>{
         return createUserWithEmailAndPassword(auth, email, password,userName,photoURL)
      }
 //Sign in users    
 const signInUser = (email,password)=>{
+        setLoading(true)
        return signInWithEmailAndPassword(auth, email, password)
     }   
 //google login
 const googleLogin = ()=>{
+    setLoading(true)
     return signInWithPopup(auth, googleProvider)
 }
 
 //logout
 const logOut = ()=>{
     signOut(auth); 
-    setUser(null)    
+    setUser(null)  
  }
 
 
 useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user)
+            setLoading(false)
       });
       return ()=> unsubscribe()
 },[])
@@ -40,7 +43,8 @@ const allValues = {
         createUser,
         signInUser,
         googleLogin,
-        logOut
+        logOut,
+        loading
      }
     return (
         <AuthContext.Provider value={allValues}>

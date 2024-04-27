@@ -15,6 +15,7 @@ import Register from './Pages/Register.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 import FirebaseProvider from './Firebase/FirebaseProvider/FirebaseProvider.jsx';
 import ViewDetails from './Components/ViewDetails.jsx';
+import ProtectedRoute from './Components/ProtectedRoute.jsx';
 
 const router = createBrowserRouter ([
     {
@@ -32,12 +33,12 @@ const router = createBrowserRouter ([
      },
      {
       path:'/addspot/:id',
-      element: <ViewDetails></ViewDetails>,
+      element: <ProtectedRoute><ViewDetails></ViewDetails></ProtectedRoute>,
       loader:({params})=>fetch(`http://localhost:5000/addspot/${params.id}`)
      },
      {
       path:'/addSpot',
-      element:<AddSpot></AddSpot>,
+      element:<ProtectedRoute><AddSpot></AddSpot></ProtectedRoute>,
      },
      {
       path:'myList',
