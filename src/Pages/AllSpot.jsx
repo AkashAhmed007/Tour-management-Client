@@ -1,10 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import SingleSpot from "../Components/SingleSpot";
-// import { useState } from "react";
 
 const AllSpot = () => {
   const allSpotData = useLoaderData();
-  // const [filter, setFilter] = useState(allSpotData);
   const handleFilter = (filter) => {
     if (filter === "cost") {
       const sortByCost = allSpotData.sort((a, b) => parseFloat(a.Averge_Cost) - parseFloat(b.Averge_Cost));
@@ -23,10 +21,12 @@ const AllSpot = () => {
           </li>
         </ul>
       </div>
-      <div className="grid md:grid-cols-3 gap-5">
+      <div>
+        <div className="grid md:grid-cols-3 gap-5">
         {allSpotData.map((spot) => (
           <SingleSpot key={spot._id} spot={spot}></SingleSpot>
         ))}
+        </div>
       </div>
     </div>
   );

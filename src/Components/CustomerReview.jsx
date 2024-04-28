@@ -1,7 +1,7 @@
 const CustomerReview = () => {
     return (
         <div>
-              <h1>Customer Review</h1>
+        <h1 className="text-center text-3xl font-bold m-5">Customer Review</h1>
       <div className="flex justify-center items-center gap-3">
         <div>
           <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
@@ -9,13 +9,13 @@ const CustomerReview = () => {
               <div className="flex space-x-4">
                 <div>
                   <img
-                    src="https://source.unsplash.com/100x100/?portrait"
+                    src="https://i.ibb.co/Rj6DM7r/1554655776610-e-2147483647-v-beta-t-4-Yr-W1pm-PYz9-Wz-Qc-Au-B1pjw-Qy-Jj-HADEq9-N-ax-KO-Gjq-E.jpg"
                     alt=""
                     className="object-cover w-12 h-12 rounded-full dark:bg-gray-500"
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">Leroy Jenkins</h4>
+                  <h4 className="font-bold">Ronak Watkinson</h4>
                   <span className="text-xs dark:text-gray-600">2 days ago</span>
                 </div>
               </div>
@@ -32,14 +32,10 @@ const CustomerReview = () => {
             </div>
             <div className="p-4 space-y-2 text-sm dark:text-gray-600">
               <p>
-                Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu
-                dictum lectus consequat vitae. Etiam ut dolor id justo fringilla
-                finibus.
+              “I recently visited with them and was thoroughly impressed by both the exquisite the impeccable service. The are friendly showcased a variety of behaviour and activities, blending bold flavors and beautiful presentation. 
               </p>
               <p>
-                Donec eget ultricies diam, eu molestie arcu. Etiam nec lacus eu
-                mauris cursus venenatis. Maecenas gravida urna vitae accumsan
-                feugiat. Vestibulum commodo, ante sit urna purus rutrum sem.
+              Had very good travel experience and travel arrangements were really good and hustle free
               </p>
             </div>
           </div>
@@ -50,13 +46,13 @@ const CustomerReview = () => {
               <div className="flex space-x-4">
                 <div>
                   <img
-                    src="https://source.unsplash.com/100x100/?portrait"
+                    src="https://i.ibb.co/cXCZwJN/6d67730d16af04f3f956389d4cc244af808b8381c23b1e3d218ecd792de14fa8.jpg"
                     alt=""
                     className="object-cover w-12 h-12 rounded-full dark:bg-gray-500"
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">Leroy Jenkins</h4>
+                  <h4 className="font-bold">Park Peter</h4>
                   <span className="text-xs dark:text-gray-600">2 days ago</span>
                 </div>
               </div>
@@ -73,14 +69,10 @@ const CustomerReview = () => {
             </div>
             <div className="p-4 space-y-2 text-sm dark:text-gray-600">
               <p>
-                Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu
-                dictum lectus consequat vitae. Etiam ut dolor id justo fringilla
-                finibus.
+              It was a great experience. We enjoyed our trip a lot. All thanks to Kunal Tiwari and Tarun Mishra for all their efforts in making our trip memorable one.
               </p>
               <p>
-                Donec eget ultricies diam, eu molestie arcu. Etiam nec lacus eu
-                mauris cursus venenatis. Maecenas gravida urna vitae accumsan
-                feugiat. Vestibulum commodo, ante sit urna purus rutrum sem.
+              “The staff was great. The receptionists were very helpful and answered all our questions. The room was clean and bright, and the room service was always on time. Will be coming back! Thank you so much.”
               </p>
             </div>
           </div>
@@ -91,7 +83,7 @@ const CustomerReview = () => {
               <div className="flex space-x-4">
                 <div>
                   <img
-                    src="https://source.unsplash.com/100x100/?portrait"
+                    src="https://i.ibb.co/LdH5n9s/5403292396-0804de9bcf-b.jpg"
                     alt=""
                     className="object-cover w-12 h-12 rounded-full dark:bg-gray-500"
                   />
@@ -114,14 +106,10 @@ const CustomerReview = () => {
             </div>
             <div className="p-4 space-y-2 text-sm dark:text-gray-600">
               <p>
-                Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu
-                dictum lectus consequat vitae. Etiam ut dolor id justo fringilla
-                finibus.
+              Really had a excellent trip where the car service was fantastic. Driver Stan Angdu was very nice, cooperative and was good human being also available at dot time. 
               </p>
               <p>
-                Donec eget ultricies diam, eu molestie arcu. Etiam nec lacus eu
-                mauris cursus venenatis. Maecenas gravida urna vitae accumsan
-                feugiat. Vestibulum commodo, ante sit urna purus rutrum sem.
+              “I recently visited with them and was thoroughly impressed by both the exquisite the impeccable service. The are friendly showcased a variety of behaviour and activities, blending bold flavors and beautiful presentation. 
               </p>
             </div>
           </div>

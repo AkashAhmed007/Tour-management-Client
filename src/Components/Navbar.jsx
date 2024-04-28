@@ -4,7 +4,6 @@ import { useContext } from "react";
 
 const Navbar = () => {
 const { user,logOut } = useContext(AuthContext);
-console.log(user)
   return (
     <div className="w-full fixed top-0 z-10">
     <div className="navbar bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%; text-white">
@@ -48,7 +47,7 @@ console.log(user)
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-2xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">
-        Tour-Management Website
+        Tourism and Travel Ltd
         </Link>
       </div>
       <div className="ml-24 navbar-center hidden lg:flex">

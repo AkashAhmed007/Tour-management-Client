@@ -1,49 +1,61 @@
-import { useState } from "react";
-import { useForm} from "react-hook-form"
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-const AddSpot = () => {
-const [registerError,setRegisterError] = useState('');
-const {register,handleSubmit,formState: { errors }} = useForm()
+// import Swal from "sweetalert2";
+const UpdateSpot = () => {
+const data = useLoaderData();
+const handleSubmit =(e)=>{
+  e.preventDefault()
+  const form = e.target;
+  const country_Name = form.countryName.value
+  const spotName = form.spotName.value
+  const location= form.location.value
+  const cost = form.cost.value
+  const season = form.season.value
+  const time =form.time.value
+  const visitor = form.visitor.value
+  const email =form.email.value
+  const name = form.name.value
+  const image =form.image.value
 
-const onSubmit =(data)=>{
-    const {countryName,spotName,location,cost,season,time,visitor,email,image,description} = data
-    const addSpotData = {countryName,spotName,location,cost,season,time,visitor,email,image,description}
-   
-    fetch('http://localhost:5000/addspot',{
-      method: 'POST',
+  const updateValue = {country_Name,spotName,location,cost,season,time,visitor,email,name,image}
+  console.log(updateValue)
+fetch(`http://localhost:5000/updatespot/${data._id}`,{
+      method: 'PUT',
       headers:{
         'content-type':'application/json'
       },
-      body: JSON.stringify(addSpotData)
+      body: JSON.stringify(updateValue)
     })
     .then(res=>res.json())
     .then(data=>{
       console.log(data)
-      if(data.insertedId){
+      if(data.modifiedCount > 0){
         Swal.fire({
-          title: 'You have added spot successfully!',
+          title: 'You have Updated place spot successfully!',
           text: 'Do you want to continue',
           icon: 'success',
           confirmButtonText: 'Ok'
         })
       }
     })
-  setRegisterError('')
+
+  
   }
-  return (
-    <div className="min-h-screen my-20">
-      <section className="p-6 dark:bg-gray-100 dark:text-gray-900 bg-[url('https://i.ibb.co/VC9yssZ/twilight-8171206-1280.jpg')] bg-no-repeat bg-center bg-cover">
-        <form onSubmit={handleSubmit(onSubmit)}
+    return (
+        <div className="my-20">
+            <div className="min-h-screen my-20">
+              <h1>data:{data.location}</h1>
+      <section className="p-6 dark:bg-gray-100 dark:text-gray-900 bg-[url('https://i.ibb.co/Lp1cRjr/background-2203989-1280.jpg')] bg-no-repeat bg-center bg-cover">
+        <form onSubmit={handleSubmit}
           noValidate=""
           action=""
           className="container flex flex-col mx-auto space-y-12"
         >
-          {registerError && <p className="text-red-500">{registerError}</p>}
+         
           <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
-            <div className="space-y-2 col-span-full lg:col-span-1 text-white text-xl">
-              <p className="font-medium">Personal Inormation</p>
+            <div className="space-y-4 col-span-full lg:col-span-1 text-white text-center">
               <p className="text-2xl font-bold">
-               Choose Your  Destination
+               Update Your Information
               </p>
             </div>
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
@@ -56,9 +68,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="country_Name"
                   className="w-full py-2 px-4 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("countryName", { required: true })}
+                  
                 />
-                {errors.countryName && <span className="text-red-500" >This field is required</span>}
+                
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -69,9 +81,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="tourists_spot_name"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("spotName", { required: true })}
+                 
                 />
-                {errors.spotName && <span className="text-red-500" >This field is required</span>}
+               
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -82,9 +94,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="location"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("location", { required: true })}
+                 
                 />
-                {errors.location && <span className="text-red-500" >This field is required</span>}
+                
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -95,9 +107,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="average_cost"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("cost", { required: true })}
+                 
                 />
-                 {errors.cost && <span className="text-red-500" >This field is required</span>}
+                 
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -108,9 +120,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="seasonality"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("season", { required: true })}
+                  
                 />
-                {errors.season && <span className="text-red-500" >This field is required</span>}
+                
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -121,9 +133,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="travel_time"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("time", { required: true })}
+                 
                 />
-                 {errors.time && <span className="text-red-500" >This field is required</span>}
+                 
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -134,9 +146,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="totaVisitorsPerYear"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("visitor", { required: true })}
+                  
                 />
-                {errors.visitor && <span className="text-red-500" >This field is required</span>}
+                
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -147,9 +159,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="User Email"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("email", { required: true })}
+                  
                 />
-                 {errors.email && <span className="text-red-500" >This field is required</span>}
+                 
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -160,9 +172,9 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="User Name"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("name", { required: true })}
+                  
                 />
-                {errors.name && <span className="text-red-500" >This field is required</span>}
+                
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-xl font-bold text-white">
@@ -173,25 +185,17 @@ const onSubmit =(data)=>{
                   type="text"
                   placeholder="Image"
                   className="w-full px-4 py-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
-                  {...register("image", { required: true })}
-                />
-                {errors.image && <span className="text-red-500" >This field is required</span>}
-              </div>
-              <div className="col-span-full">
-                <label htmlFor="firstname" className="text-xl font-bold text-white">
-                short description
-                </label> <br />
-                <input type="text" name="description" className="w-80 h-20" placeholder="Enter your description"
-                {...register("description", { required: true })}
                 />
               </div>
-              <input  className=" w-full btn" type="submit" value="Add" />
+              {/* <button onClick={()=>onSubmit(_id)} className="btn btn-success">Update</button> */}
+              <input className="btn btn-secondary" type="submit" value="Update" />
             </div>
           </fieldset>
         </form>
       </section>
     </div>
-  );
+        </div>
+    );
 };
 
-export default AddSpot;
+export default UpdateSpot;

@@ -1,8 +1,8 @@
 const CompanyOverview = () => {
     return (
         <div>
-        <h1>OverView</h1>
-        <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
+        <h1 className="text-center text-3xl font-bold m-5">Company Yearly OverView</h1>
+        <section className="p-6 dark:bg-gray-100 dark:text-gray-800 bg-slate-200">
           <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
             <div className="flex flex-col justify-start m-2 lg:m-6">
               <p className="text-4xl font-bold leading-none lg:text-6xl">50+</p>

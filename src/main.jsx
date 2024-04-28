@@ -16,6 +16,7 @@ import ErrorPage from './Pages/ErrorPage.jsx';
 import FirebaseProvider from './Firebase/FirebaseProvider/FirebaseProvider.jsx';
 import ViewDetails from './Components/ViewDetails.jsx';
 import ProtectedRoute from './Components/ProtectedRoute.jsx';
+import UpdateSpot from './Components/UpdateSpot.jsx';
 
 const router = createBrowserRouter ([
     {
@@ -41,8 +42,19 @@ const router = createBrowserRouter ([
       element:<ProtectedRoute><AddSpot></AddSpot></ProtectedRoute>,
      },
      {
-      path:'myList',
-      element: <MyList></MyList>
+      path:'/myList',
+      element: <ProtectedRoute><MyList></MyList></ProtectedRoute>,
+      loader :()=>fetch('http://localhost:5000/addspot')
+     },
+     { 
+      path:'/updatespot',
+      element:<UpdateSpot></UpdateSpot>,
+      loader: ()=>fetch('http://localhost:5000/updatespot')
+     },
+     {
+      path:'/updatespot/:id',
+      element:<UpdateSpot></UpdateSpot>,
+      loader:({params})=>fetch(`http://localhost:5000/updatespot/${params.id}`)
      },
      {
       path:'/login',
