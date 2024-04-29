@@ -19,7 +19,7 @@ const handleSubmit =(e)=>{
 
   const updateValue = {country_Name,spotName,location,cost,season,time,visitor,email,name,image}
   console.log(updateValue)
-fetch(`http://localhost:5000/updatespot/${data._id}`,{
+fetch(`https://tourism-management-server-alpha.vercel.app/updatespot/${data._id}`,{
       method: 'PUT',
       headers:{
         'content-type':'application/json'

@@ -14,7 +14,7 @@ const AddedList = ({ spot}) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addspot/${_id}`, {
+        fetch(`https://tourism-management-server-alpha.vercel.app/addspot/${_id}`, {
           method: "DELETE"
         })
           .then((res) => res.json())

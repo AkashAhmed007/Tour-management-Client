@@ -30,12 +30,12 @@ const router = createBrowserRouter ([
      {
       path:'/allSpot',
       element: <AllSpot></AllSpot>,
-      loader :()=>fetch('http://localhost:5000/addspot')
+      loader :()=>fetch('https://tourism-management-server-alpha.vercel.app/addspot')
      },
      {
       path:'/addspot/:id',
       element: <ProtectedRoute><ViewDetails></ViewDetails></ProtectedRoute>,
-      loader:({params})=>fetch(`http://localhost:5000/addspot/${params.id}`)
+      loader:({params})=>fetch(`https://tourism-management-server-alpha.vercel.app/addspot/${params.id}`)
      },
      {
       path:'/addSpot',
@@ -44,17 +44,17 @@ const router = createBrowserRouter ([
      {
       path:'/myList',
       element: <ProtectedRoute><MyList></MyList></ProtectedRoute>,
-      loader :()=>fetch('http://localhost:5000/addspot')
+      loader :()=>fetch('https://tourism-management-server-alpha.vercel.app/addspot')
      },
      { 
       path:'/updatespot',
       element:<UpdateSpot></UpdateSpot>,
-      loader: ()=>fetch('http://localhost:5000/updatespot')
+      loader: ()=>fetch('https://tourism-management-server-alpha.vercel.app/updatespot')
      },
      {
       path:'/updatespot/:id',
       element:<UpdateSpot></UpdateSpot>,
-      loader:({params})=>fetch(`http://localhost:5000/updatespot/${params.id}`)
+      loader:({params})=>fetch(`https://tourism-management-server-alpha.vercel.app/updatespot/${params.id}`)
      },
      {
       path:'/login',
