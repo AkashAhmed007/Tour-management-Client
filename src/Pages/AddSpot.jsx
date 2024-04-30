@@ -8,7 +8,7 @@ const {register,handleSubmit,formState: { errors }} = useForm()
 const onSubmit =(data)=>{
     const {countryName,spotName,location,cost,season,time,visitor,email,image,description} = data
     const addSpotData = {countryName,spotName,location,cost,season,time,visitor,email,image,description}
-   
+
     fetch('https://tourism-management-server-alpha.vercel.app/addspot',{
       method: 'POST',
       headers:{

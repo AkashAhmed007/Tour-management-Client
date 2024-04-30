@@ -5,19 +5,31 @@ const ViewDetails = () => {
     console.log(detailsSpot)
     const {countryName,spotName,location,cost,season,time,visitor,email,image,description} = detailsSpot
     return (
-        <div className="my-20">
-            <h1>View details</h1>
-            <img src={image} alt="" />
-            <p>{countryName}</p>
-            <p>{spotName}</p>
-            <p>{location}</p>
-            <p>{cost}</p>
-            <p>{season}</p>
-            <p>{time}</p>
-            <p>{visitor}</p>
-            <p>{email}</p>
-            <p>{description}</p>
-        </div>
+        <div className="card bg-base-100 shadow-xl my-20">
+        <figure>
+          <img
+            src={image}
+            alt="Movie"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{spotName}</h2>
+          <hr />
+          <p>{description}</p>
+          <hr />
+          <p>CountryName: {countryName}</p>
+          <p>Location: {location}</p>
+          <p>Cost: {cost}</p>
+          <p>Season: {season}</p>
+          <p>Travel-Time: {time}</p>
+          <p>Visitor: {visitor}</p>
+          <p>User-Email: {email}</p>
+          <div className="card-actions">
+            <button className='btn btn-secondary'>View Details</button>
+          </div>
+        
+      </div>
+    </div>
     );
 };
 

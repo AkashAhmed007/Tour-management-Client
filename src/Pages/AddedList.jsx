@@ -43,11 +43,13 @@ const AddedList = ({ spot}) => {
           <p>Location:{location}</p>
           <p>Cost: {cost}</p>
           <div className="btn btn-secondary">
-            <NavLink to={`/addspot/${_id}`}>View Details</NavLink>
+            <NavLink to={`/addspot/${_id}`}>
+              <button>View Details</button>
+            </NavLink>
           </div>
           <div>
            <NavLink to={`/updatespot/${_id}`}>
-            <button className="btn btn-primary mr-4 w-full">Edit</button>
+            <button className="btn btn-primary mr-4 w-full mb-2">Edit</button>
             </NavLink>
             <button
               onClick={() => handleDelete(_id)}

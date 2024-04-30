@@ -11,18 +11,18 @@ const AllSpot = () => {
   };
   return (
     <div className="min-h-screen my-16">
-      <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn btn-full text-center m-1">
+      <div className="dropdown w-full mx-auto bg-green-600">
+        <div tabIndex={0} role="button" className="btn w-full mx-auto m-1">
           Sort By
         </div>
         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2">
-          <li className="text-center bg-gray-600 text-white" onClick={() => handleFilter("cost")}>
+          <li className="text-center bg-gray-600 text-white w-full mx-auto " onClick={() => handleFilter("cost")}>
             <a >Average_Cost</a>
           </li>
         </ul>
       </div>
       <div>
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-5 m-5">
         {allSpotData.map((spot) => (
           <SingleSpot key={spot._id} spot={spot}></SingleSpot>
         ))}

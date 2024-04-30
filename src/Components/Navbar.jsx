@@ -6,7 +6,7 @@ const Navbar = () => {
 const { user,logOut } = useContext(AuthContext);
   return (
     <div className="w-full fixed top-0 z-10">
-    <div className="navbar bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%; text-white">
+    <div className="navbar bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-[#fd1d1d] to-90%; text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
