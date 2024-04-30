@@ -185,7 +185,9 @@ const onSubmit =(data)=>{
                 {...register("description", { required: true })}
                 />
               </div>
-              <input  className=" w-full btn" type="submit" value="Add" />
+              <div className="w-full">
+              <button className="btn btn-primary mb-2">Add</button>
+              </div>
             </div>
           </fieldset>
         </form>

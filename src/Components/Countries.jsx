@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const Countries = () => {
   return (
 
-    <div className="mx-auto w-10/12" >
+    <div className="mx-auto lg:w-10/12 md:w-3/4 w-full" >
     <h1 className="text-3xl font-bold text-center m-5">Where are you want to go?</h1>
-    <div className="grid grid-cols-2">
+    <div className="grid lg:grid-cols-2">
       <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
         <div className="flex justify-between pb-4 border-bottom">
           <div className="flex items-center text-2xl font-bold">

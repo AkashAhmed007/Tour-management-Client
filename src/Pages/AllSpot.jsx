@@ -22,7 +22,7 @@ const AllSpot = () => {
         </ul>
       </div>
       <div>
-        <div className="grid md:grid-cols-3 gap-5 m-5">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 m-5">
         {allSpotData.map((spot) => (
           <SingleSpot key={spot._id} spot={spot}></SingleSpot>
         ))}

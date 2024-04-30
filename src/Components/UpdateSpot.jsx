@@ -44,7 +44,6 @@ fetch(`https://tourism-management-server-alpha.vercel.app/updatespot/${data._id}
     return (
         <div className="my-20">
             <div className="min-h-screen my-20">
-              <h1>data:{data.location}</h1>
       <section className="p-6 dark:bg-gray-100 dark:text-gray-900 bg-[url('https://i.ibb.co/Lp1cRjr/background-2203989-1280.jpg')] bg-no-repeat bg-center bg-cover">
         <form onSubmit={handleSubmit}
           noValidate=""

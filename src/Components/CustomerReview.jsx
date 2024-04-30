@@ -2,11 +2,11 @@ const CustomerReview = () => {
     return (
         <div>
         <h1 className="text-center text-3xl font-bold m-5">Customer Review</h1>
-      <div className="flex justify-center items-center gap-3">
+      <div className="lg:flex md:flex justify-center items-center lg:gap-3 md:gap-2">
         <div>
           <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
             <div className="flex justify-between p-4">
-              <div className="flex space-x-4">
+              <div className="flex lg:space-x-4 md:space-x-2">
                 <div>
                   <img
                     src="https://i.ibb.co/Rj6DM7r/1554655776610-e-2147483647-v-beta-t-4-Yr-W1pm-PYz9-Wz-Qc-Au-B1pjw-Qy-Jj-HADEq9-N-ax-KO-Gjq-E.jpg"
@@ -30,7 +30,7 @@ const CustomerReview = () => {
                 <span className="text-xl font-bold">4.5</span>
               </div>
             </div>
-            <div className="p-4 space-y-2 text-sm dark:text-gray-600">
+            <div className="p-4 lg:space-y-2 text-sm dark:text-gray-600">
               <p>
               “I recently visited with them and was thoroughly impressed by both the exquisite the impeccable service. The are friendly showcased a variety of behaviour and activities, blending bold flavors and beautiful presentation. 
               </p>
