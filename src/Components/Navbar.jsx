@@ -47,7 +47,7 @@ const { user,logOut } = useContext(AuthContext);
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-2xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">
-        Tourism and Travel Ltd
+        Dreamy Destinations
         </Link>
       </div>
       <div className="ml-24 navbar-center hidden lg:flex">
