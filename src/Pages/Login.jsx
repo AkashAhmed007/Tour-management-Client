@@ -21,10 +21,10 @@ const Login = () => {
           icon: "success",
           confirmButtonText: "Ok",
         });
-        navigate(location?.state ? location?.state : "/");
       } else {
         alert("Please Register first");
       }
+      navigate(location?.state || "/", {replace:true});
     });
   };
   
@@ -52,8 +52,8 @@ const onSubmit = (data) => {
             icon: "success",
             confirmButtonText: "Ok",
           });
-          navigate(location?.state ? location?.state : "/");
         }
+        navigate(location?.state || "/", {replace:true});
       })
       .catch((error) => {
         setLoginError(error.message);
