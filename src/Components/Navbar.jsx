@@ -63,7 +63,7 @@ const { user,logOut } = useContext(AuthContext);
           </div>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end" title={user?.displayName}>
         {user ? (
           <div className="dropdown dropdown-end">
             <div
@@ -83,7 +83,7 @@ const { user,logOut } = useContext(AuthContext);
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-black rounded-box w-52"
             >
               <li>
-                <button className="justify-between">{user?.displayName || 'User name not found'}</button></li>
+                <button className="justify-between">{user?.displayName || user?.email}</button></li>
               <li>
                 <button onClick={logOut}>Logout</button>
               </li>

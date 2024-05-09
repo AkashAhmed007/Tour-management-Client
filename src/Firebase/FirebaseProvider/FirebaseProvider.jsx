@@ -6,7 +6,7 @@ const googleProvider = new GoogleAuthProvider()
 export const AuthContext = createContext(null);
 const FirebaseProvider = ({children}) => {
 const [user,setUser] = useState(null)
-const [loading,setLoading] = useState(false);
+const [loading,setLoading] = useState(true);
 //Create users 
 const createUser =(email,password,userName,photoURL)=>{
         return createUserWithEmailAndPassword(auth, email, password,userName,photoURL)
